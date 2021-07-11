@@ -1,21 +1,11 @@
 import turtle as t
 import random as rd
-import colorgram as cg
 
-tim = t.Turtle()
+color_list = [(241, 222, 86), (35, 98, 185), (86, 174, 218), (169, 67, 37), (217, 158, 84), (187, 16, 34), (173, 49, 85), (78, 108, 210), (225, 57, 103), (161, 163, 23), (166, 27, 17), (75, 176, 77), (232, 70, 44), (225, 123, 172), (125, 198, 117), (20, 55, 146), (59, 119, 64), (118, 226, 184), (71, 30, 43), (135, 216, 233), (238, 158, 217), (41, 172, 183), (29, 41, 84), (242, 175, 152), (162, 165, 235), (90, 30, 22)]
+
+time = t.Turtle()
 t.colormode(255)
 screen = t.Screen()
 
-# Extracting colors from the image
-colors = cg.extract("image.jpg", 10)
-
-# Creating a list of tuples of rgb colors
-rgb_colors = []
-for each_rgb in range(len(colors)):
-    color = []
-    for each_color in range(3):
-        color.append(colors[each_rgb].rgb[each_color])
-    color_tuple = tuple(color)
-    rgb_colors.append(color_tuple)
 
 screen.exitonclick()
