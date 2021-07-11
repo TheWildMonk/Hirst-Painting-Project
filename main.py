@@ -10,12 +10,12 @@ screen = t.Screen()
 colors = cg.extract("image.jpg", 10)
 
 # Creating a list of tuples of rgb colors
-rgb_colors = []
-for each_rgb in range(len(colors)):
-    color = []
-    for each_color in range(3):
-        color.append(colors[each_rgb].rgb[each_color])
-    color_tuple = tuple(color)
-    rgb_colors.append(color_tuple)
+color = []
+for each_color in colors:
+    r = each_color.rgb.r
+    g = each_color.rgb.g
+    b = each_color.rgb.b
+    rgb_color = (r, g, b)
+    color.append(rgb_color)
 
 screen.exitonclick()
