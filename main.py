@@ -21,6 +21,7 @@ screen.canvheight = 500
 screen.reset()
 screen.setworldcoordinates(-50, -50, 500, 500)
 
+
 def reset_line_position():
     tim.left(90)
     tim.forward(50)
