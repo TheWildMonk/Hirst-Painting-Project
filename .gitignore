@@ -1,2 +1,5 @@
 # .idea Directory
 .idea/
+
+# pycache Directory
+__pycache__/
