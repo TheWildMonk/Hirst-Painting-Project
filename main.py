@@ -7,10 +7,6 @@ color_list = [(241, 222, 86), (35, 98, 185), (86, 174, 218),
               (20, 55, 146), (59, 119, 64), (118, 226, 184), (71, 30, 43), (135, 216, 233), (238, 158, 217),
               (41, 172, 183), (29, 41, 84), (242, 175, 152), (162, 165, 235), (90, 30, 22)]
 
-# Setting turtles attributes
-tim = t.Turtle()
-t.colormode(255)
-tim.speed(1)
 
 # Setting screen attributes
 screen = t.Screen()
@@ -20,6 +16,12 @@ screen.canvheight = 500
 # Resetting the turtle world coordinates
 screen.reset()
 screen.setworldcoordinates(-50, -50, 500, 500)
+
+# Setting turtles attributes
+tim = t.Turtle()
+t.colormode(255)
+tim.speed("fastest")
+tim.hideturtle()
 
 
 def reset_line_position():
@@ -41,11 +43,10 @@ def create_art():
 
 # While loop to create the 10x10 art
 end_of_canvas = 1
-while end_of_canvas < 10:
+while end_of_canvas < 11:
     create_art()
-    reset_line_position()
+    if end_of_canvas < 10:
+        reset_line_position()
     end_of_canvas += 1
 
-
-create_art()
 screen.exitonclick()
